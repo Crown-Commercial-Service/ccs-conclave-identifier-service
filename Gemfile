@@ -57,8 +57,8 @@ group :development, :test do
   gem 'listen', '~> 3.2'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'dotenv-rails', '>= 2.7.6'
-  gem 'i18n-tasks', '>= 1.0.11'
+  gem 'dotenv-rails', '>= 2.8.1'
+  gem 'i18n-tasks', '>= 1.0.12'
   gem 'rspec-rails', '>= 5.1.2'
   # Rubocop code quality and error scanning.
   gem 'rubocop', '>= 1.12.0'
