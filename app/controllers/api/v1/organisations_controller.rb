@@ -12,12 +12,10 @@ module Api
             end
 
             def create 
-                organisation = Organisation.new(organisation_params)
-
+                organisation = Organisation.new(PPON_ID: generate_specific_ppon_id(Organisation.count+1))
                 if organisation.save
-                    random_string = SecureRandom.alphanumeric(8).upcase
-                    organisation.update(PPON_ID: random_string)
                     render json: organisation.PPON_ID, status: :ok
+                    organisation.save
                 else
                     render json: {status: 'ERROR', message: 'Organisation not saved', data:organisation.errors}, status: :unprocessable_entity
                 end
@@ -28,6 +26,12 @@ module Api
 
             def organisation_params
                 params.permit(:id)
+            end
+
+            def generate_specific_ppon_id(index)
+                result = %x(python3 ppon_id_script.py #{index} 2>&1)
+                puts "Generating PPON ID, at index: #{index}:  #{result}"
+                return result.to_s
             end
         end
     end 
