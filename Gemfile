@@ -8,7 +8,7 @@ gem 'rails', '~> 6.0.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18.4'
+gem 'pg', '~> 1.1'
 gem 'activerecord-postgis-adapter', '>= 6.0.1'
 # Use Puma as the app server
 gem 'puma', '~> 4.3', '>= 4.3.12'
@@ -69,6 +69,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'factory_bot_rails', '>= 6.2.0'
   gem 'simplecov', require: false
+  gem 'hirb'
+  gem 'activerecord-reset-pk-sequence' 
   # Adds support for Capybara system testing and selenium driver
   #gem 'capybara', '>= 2.15'
   # gem 'selenium-webdriver'
