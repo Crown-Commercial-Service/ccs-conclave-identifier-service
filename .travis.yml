@@ -12,13 +12,15 @@ env:
     - CF_PASS=$DEPLOY_PASSWORD
     - CF_SPACE=$SPACE
 services:
-  - postgresql-14
+  - postgresql
 addons:
   postgresql: '14'
 install: bundle install --jobs=3 --retry=3
 before_script:
   - sudo apt-get -qq update
   - sudo apt-get install -y postgresql-14
+  - rake db:create RAILS_ENV=test
+  - rake db:create RAILS_ENV=development
 before_deploy:
   - echo "install cloudfoundry cli"
   - wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
