@@ -7,4 +7,4 @@ template = ERB.new(File.read("#{Rails.root}/app/apminsight.conf.erb"))
 result = template.result(binding)
 
 # Write the result to the apminsight.conf file
-File.write("#{Rails.root}/app.apminsight.conf", result)
+File.write("#{Rails.root}/app/apminsight.conf", result)
