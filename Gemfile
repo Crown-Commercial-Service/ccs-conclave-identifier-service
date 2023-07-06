@@ -12,7 +12,7 @@ gem 'puma', '~> 4.1'
 #Postgres DB
 gem 'activerecord-postgis-adapter', '>= 7.0.0'
 gem 'pg', '~> 1.1'
-gem 'site24x7_apminsight'
+gem 'site24x7_apminsight', '~> 1.8', '>= 1.8.7'
 gem 'erb', '2.2.3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
