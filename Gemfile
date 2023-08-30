@@ -4,13 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.7', '>= 6.1.7.3'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.6', '>= 5.6.7'
 #Postgres DB
-gem 'activerecord-postgis-adapter', '>= 7.0.0'
+gem 'activerecord-postgis-adapter', '>= 8.0.0'
 gem 'pg', '~> 1.1'
 gem 'site24x7_apminsight', '~> 1.8', '>= 1.8.7'
 gem 'erb', '2.2.3'
@@ -53,7 +53,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop'
-  gem 'rubocop-rails'
+  gem 'rubocop-rails', '>= 2.19.0'
   gem 'rubocop-rspec'
   gem 'rubocop-performance'
 end
