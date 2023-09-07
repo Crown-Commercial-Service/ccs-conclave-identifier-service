@@ -11,5 +11,6 @@ class ApplicationController < ActionController::API
             ], 
             "description": "The resource you were looking for could not be found."
         ], status: :not_found
+        Rollbar.error('Not Found: The resource you were looking for could not be found.')
     end
 end
