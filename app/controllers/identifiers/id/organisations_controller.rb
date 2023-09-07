@@ -18,6 +18,7 @@ module Identifiers
             }, status: :created
         else
           render json: { status: 'ERROR', message: 'Organisation not saved', data: organisation.errors }, status: :unprocessable_entity
+          Rollbar.error('ERROR: Organisation not saved')
         end
       end
       private

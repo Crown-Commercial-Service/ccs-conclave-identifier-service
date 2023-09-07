@@ -10,28 +10,32 @@
 #All the configuration options defaults to factory configuration if commented or not supported values
 
 #License key of your Site24x7 APM Insight account.
-license.key= ENV['SITE_24X7_KEY']
+license.key=<%= ENV["SITE_24X7_KEY"] %>
+
+#uncomment when apminsightgem is updated to 1.8.7
+agent.delay.start=true
+
 
 #Logical name of your application. Say for example you have "Order Processing" applications running in
 #10 instances of Tomcat server. Specify the name as "Order Processing" for the name in all the 10 
 #instances while deploying the agent. Site24x7 will group the data from 10 instances of
 #Tomcat and provide response time, throughput etc. 
-application.name=My Application
+application.name=<%= "conclave-identifier-service-#{ENV['ENVIRONMENT']}" %>
 
 #APM Insight agent communicates to the Site24x7 through the HTTP/HTTPS protocol.
 #Specify Proxy server configuration when there is a proxy server between APM Insight agent and
 #Site24x7 server. 
 #
-behind.proxy=false
+behind.proxy=<%= ENV["SITE_24X7_PROXY"] %>
 #proxy.server.host=proxyserver
 #proxy.server.port=proxyport
 #proxy.auth.username=proxyuser
 #proxy.auth.password=proxypassword
 
 #Application Server HTTP/HTTPS listening port.Say for example when you are deploying the agent in Tomcat
-#Server running in 8080 port, specify the value as 8080.
+#If server running in 8080 port, specify the value as 8080.
 #[Mandatory]
-agent.server.port=8080
+agent.server.port=<%= ENV["SITE_24X7_PORT"] %>
 
 #The Apdex (Application Performance Index) threshold is used to calculate application performance score.
 #More at http://www.apdex.org. 
