@@ -31,3 +31,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 .local.env
+.env.local
+
+# Ignore Site24x7
+apminsight.conf
