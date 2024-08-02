@@ -51,10 +51,10 @@ group :development do
   gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'rubocop'
-  gem 'rubocop-rails', '>= 2.21.1'
-  gem 'rubocop-rspec'
-  gem 'rubocop-performance'
+  gem 'rubocop', '>= 1.56.4'
+  gem 'rubocop-rails', '>= 2.21.2'
+  gem 'rubocop-rspec', '>= 2.24.0'
+  gem 'rubocop-performance', '>= 1.19.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
