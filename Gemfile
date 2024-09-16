@@ -11,7 +11,7 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 5.6', '>= 5.6.7'
 #Postgres DB
 gem 'activerecord-postgis-adapter', '>= 8.0.0'
-gem 'pg', '~> 1.1'
+gem 'pg', '~> 1.5'
 gem 'site24x7_apminsight', '~> 1.8', '>= 1.8.7'
 gem 'erb', '2.2.3'
 
