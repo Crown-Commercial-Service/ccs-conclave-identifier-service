@@ -53,7 +53,7 @@ group :development do
   gem 'spring'
   gem 'rubocop'
   gem 'rubocop-rails', '>= 2.21.1'
-  gem 'rubocop-rspec'
+  gem 'rubocop-rspec', '>= 3.5.0'
   gem 'rubocop-performance'
 end
 
