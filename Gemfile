@@ -13,7 +13,7 @@ gem 'puma', '~> 5.6', '>= 5.6.7'
 gem 'activerecord-postgis-adapter', '>= 8.0.0'
 gem 'pg', '~> 1.1'
 gem 'site24x7_apminsight', '~> 1.8', '>= 1.8.7'
-gem 'erb', '2.2.3'
+gem 'erb', '5.0.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
@@ -29,7 +29,7 @@ gem 'erb', '2.2.3'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-gem 'rack-cors'
+gem 'rack-cors', '>= 3.0.0'
 
 # aws ssm
 gem 'aws-sdk-ssm'
