@@ -4,13 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 7.1.0'
+gem 'rails', '~> 8.1.2', '>= 8.1.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.6', '>= 5.6.7'
 #Postgres DB
-gem 'activerecord-postgis-adapter', '>= 8.0.0'
+gem 'activerecord-postgis-adapter', '>= 10.0.0'
 gem 'pg', '~> 1.1'
 gem 'site24x7_apminsight', '~> 1.8', '>= 1.8.7'
 gem 'erb', '2.2.3'
@@ -44,7 +44,7 @@ gem 'rollbar'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '>= 3.0.0'
 end
 
 group :development do
@@ -52,7 +52,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'rubocop'
-  gem 'rubocop-rails', '>= 2.21.1'
+  gem 'rubocop-rails', '>= 2.21.2'
   gem 'rubocop-rspec'
   gem 'rubocop-performance'
 end
